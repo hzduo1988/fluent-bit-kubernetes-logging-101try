@@ -28,7 +28,7 @@ $ kubectl create -f https://raw.githubusercontent.com/hzduo1988/fluent-bit-kuber
 The next step is to create a ConfigMap that will be used by our Fluent Bit DaemonSet:
 
 ```
-$ kubectl create -f https://raw.githubusercontent.com/fluent/fluent-bit-kubernetes-logging/master/output/elasticsearch/fluent-bit-configmap.yaml
+$ kubectl create -f https://raw.githubusercontent.com/hzduo1988/fluent-bit-kubernetes-logging-101try/master/output/elasticsearch/fluent-bit-configmap.yaml
 ```
 
 Fluent Bit DaemonSet ready to be used with Elasticsearch on a normal Kubernetes Cluster:
