@@ -1,5 +1,7 @@
 # Kubernetes Logging with Fluent Bit v0.13
 
+dependenci on fluentd to fix k8s/v1
+
 
 
 [Fluent Bit](http://fluentbit.io) is a lightweight and extensible __Log Processor__ that comes with full support for Kubernetes:
@@ -16,9 +18,9 @@ This repository contains a set of Yaml files to deploy Fluent Bit which consider
 
 ```
 $ kubectl create namespace logging
-$ kubectl create -f https://raw.githubusercontent.com/fluent/fluent-bit-kubernetes-logging/master/fluent-bit-service-account.yaml
-$ kubectl create -f https://raw.githubusercontent.com/fluent/fluent-bit-kubernetes-logging/master/fluent-bit-role.yaml
-$ kubectl create -f https://raw.githubusercontent.com/fluent/fluent-bit-kubernetes-logging/master/fluent-bit-role-binding.yaml
+$ kubectl create -f https://raw.githubusercontent.com/hzduo1988/fluent-bit-kubernetes-logging-101try/master/fluent-bit-service-account.yaml
+$ kubectl create -f https://raw.githubusercontent.com/hzduo1988/fluent-bit-kubernetes-logging-101try/master/fluent-bit-role.yaml
+$ kubectl create -f https://raw.githubusercontent.com/hzduo1988/fluent-bit-kubernetes-logging-101try/master/fluent-bit-role-binding.yaml
 ```
 
 #### Fluent Bit to Elasticsearch
@@ -32,7 +34,7 @@ $ kubectl create -f https://raw.githubusercontent.com/fluent/fluent-bit-kubernet
 Fluent Bit DaemonSet ready to be used with Elasticsearch on a normal Kubernetes Cluster:
 
 ```
-$ kubectl create -f https://raw.githubusercontent.com/fluent/fluent-bit-kubernetes-logging/master/output/elasticsearch/fluent-bit-ds.yaml
+$ kubectl create -f https://raw.githubusercontent.com/hzduo1988/fluent-bit-kubernetes-logging-101try/master/output/elasticsearch/fluent-bit-ds.yaml
 ```
 
 #### Fluent Bit to Elasticsearch on Minikube
@@ -40,7 +42,7 @@ $ kubectl create -f https://raw.githubusercontent.com/fluent/fluent-bit-kubernet
 If you are using Minikube for testing purposes, use the following alternative DaemonSet manifest:
 
 ```
-$ kubectl create -f https://raw.githubusercontent.com/fluent/fluent-bit-kubernetes-logging/master/output/elasticsearch/fluent-bit-ds-minikube.yaml
+$ kubectl create -f https://raw.githubusercontent.com/hzduo1988/fluent-bit-kubernetes-logging-101try/master/output/elasticsearch/fluent-bit-ds-minikube.yaml
 ```
 
 #### Fluent Bit to Kafka
@@ -48,13 +50,13 @@ $ kubectl create -f https://raw.githubusercontent.com/fluent/fluent-bit-kubernet
 Create a ConfigMap that will be used by our Fluent Bit DaemonSet:
 
 ```
-$ kubectl create -f https://raw.githubusercontent.com/fluent/fluent-bit-kubernetes-logging/master/output/kafka/fluent-bit-configmap.yaml
+$ kubectl create -f https://raw.githubusercontent.com/hzduo1988/fluent-bit-kubernetes-logging-101try/master/output/kafka/fluent-bit-configmap.yaml
 ```
 
 Fluent Bit DaemonSet ready to be used with Kafka on a normal Kubernetes Cluster:
 
 ```
-$ kubectl create -f https://raw.githubusercontent.com/fluent/fluent-bit-kubernetes-logging/master/output/kafka/fluent-bit-ds.yaml
+$ kubectl create -f https://raw.githubusercontent.com/hzduo1988/fluent-bit-kubernetes-logging-101try/master/output/kafka/fluent-bit-ds.yaml
 ```
 
 #### Fluent Bit to Elasticsearch on Minikube
@@ -62,7 +64,7 @@ $ kubectl create -f https://raw.githubusercontent.com/fluent/fluent-bit-kubernet
 If you are using Minikube for testing purposes, use the following alternative DaemonSet manifest:
 
 ```
-$ kubectl create -f https://raw.githubusercontent.com/fluent/fluent-bit-kubernetes-logging/master/output/elasticsearch/fluent-bit-ds-minikube.yaml
+$ kubectl create -f https://raw.githubusercontent.com/hzduo1988/fluent-bit-kubernetes-logging-101try/master/output/elasticsearch/fluent-bit-ds-minikube.yaml
 ```
 
 ## Details
